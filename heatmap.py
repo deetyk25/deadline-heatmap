@@ -31,6 +31,7 @@ df['day'] = df['date'].dt.dayofweek  # 0=Mon
 # weights (lowercase to match your data)
 weights = {
     'homework': 1,
+    'project': 1,
     'assignment': 1.5,
     'lab': 2,
     'exam': 3
@@ -66,6 +67,7 @@ for course in courses:
 # COLOR ICONS
 type_icons = {
     'homework': '📚',
+    'project': '💼',
     'assignment': '📁',
     'lab': '🔬',
     'exam': '💯',
@@ -129,6 +131,7 @@ fig = px.imshow(
     pivot,
     color_continuous_scale=[
         [0.0, "#1a001a"],   # near black purple
+        # [0.0, "#F6F3F3"],
         [0.2, "#f563a2"],   # pink
         [0.4, "#ff2e88"],   # pink
         [0.6, "#c2185b"],   # dark purple
